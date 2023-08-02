@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        * {
+            font-family: 'Sora', sans-serif;
+        }
+
+        h1{
+            font-family: 'Lobster Two';
+        }
+
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+            /* Adjust the width of the scrollbar */
+            z-index: 9999;
+            /* Place the scrollbar above other content */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Translucent white color */
+            border-radius: 4px;
+            /* Adjust the border radius for the scrollbar thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+            /* Translucent white color on hover */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-slate-200 h-screen w-screen">
+    <section class="absolute h-screen w-screen">
+        <canvas class="h-full w-full"></canvas>
+    </section>
+    <section class=" absolute grid grid-rows-[5rem_1fr] h-full w-full pt-2 gap-2">
+        <section class="px-2">
+            <nav class="w-full h-full bg-white rounded flex justify-between items-center px-8">
+                <div>
+                    <span class="text-xl">Delhi Public School, Lava, Nagpur</span>
+                </div>
+                <div class="flex gap-12">
+                    <button onclick="window.location.href='home.html'"><span class="text-lg"> Home    </span></button>
+                    <button onclick="window.location.href='about.html'"><span class="text-lg"> About Us</span></button>
+                    <button onclick="window.location.href='faq.html'"><span class="text-lg"> FAQ     </span></button>
+                </div>
+            </nav>
+        </section>
+        <section class="overflow-scroll pl-2 h-full">
+            <section class="h-full grid grid-rows-[36rem_1fr] grid-cols-[22rem_auto] gap-2">
+                <div class="col-start-1 col-end-3 flex items-center justify-center">
+                    <h1 class="text-[5em]">The True Color of Our Fashion</h1>
+                </div>
+                <div class="h-fit flex gap-2 flex-col">
+                    <div class="h-16 rounded grid grid-cols-[1fr_4rem] bg-white overflow-hidden">
+                        <input type="text" class="hover:border-none w-full px-6 bg-transparent" placeholder="Search for Content">
+                        <button class="bg-purple"></button>
+                        <!-- #TOOD Add search icon -->
+                    </div>
+                    <div class="bg-white px-6 rounded pb-8">
+                        <div class="py-6 flex items-center">
+                            <span class="text-2xl">Content</span>
+                        </div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                        <div class="py-4 flex items-center">
+                            <span class="text-xl">What is Fast Fashion ?</span>
+                        </div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                        <div class="py-4 flex items-center">
+                            <span class="text-xl">What is bad about Fast Fashion ?</span>
+                        </div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                        <div class="py-4 flex items-center">
+                            <span class="text-xl">What can we do ?</span>
+                        </div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                        <div class="py-4 flex items-center">
+                            <span class="text-xl">Information</span>
+                        </div>
+                        <div class="h-[0.1px] bg-gray-400"></div>
+                    </div>
+                </div>
+                <section class="grid gap-2">
+                    <div class="bg-white rounded grid grid-cols-[1fr_25rem] p-2 overflow-hidden">
+                        <div class="flex flex-col gap-4 p-6">
+                            <h2 class="text-3xl">What is Fast Fashion ?</h2>
+                            <p class="text-lg">Fast fashion can be defined as cheap, trendy clothing that samples ideas from the catwalk or celebrity culture and turns them into garments at breakneck speed to meet consumer demand. The idea is to get the newest styles on the market as fast as possible, so shoppers can snap them up while they are still at the height of their popularity and then, sadly, discard them after a few wears.</p>
+                        </div>
+                        <div class="rounded overflow-hidden">
+                            <img src="https://sustainbykat.com/cdn/shop/articles/ChinesePollution-2x3_2000x.jpg?v=1637355916" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-white flex gap-2 p-2 rounded">
+                        <img class="h-80 rounded" src="https://i0.wp.com/textilelearner.net/wp-content/uploads/2012/03/problem-of-dyes-on-the-environment.jpg?fit=600%2C390&ssl=1" alt="">
+                        <img class="h-80 rounded" src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2020/09/29/apparel_industry_river_bangladesh.jpg" alt="">
+                        <img class="h-80 rounded" src="https://www.planetcustodian.com/wp-content/uploads/2021/09/textile-industry-dye-pollution.webp" alt="">
+                    </div>
+                    <div class="bg-white rounded grid p-2 overflow-hidden">
+                        <div class="flex flex-col gap-4 p-6">
+                            <h2 class="text-3xl">What is bad about Fast Fashion ?</h2>
+                            <p class="text-lg">Fast fashion’s impact on the planet is immense. The pressure to reduce costs and speed up production time means environmental corners are more likely to be cut. Fast fashion’s negative impact includes its use of cheap, toxic textile dyes—making the fashion industry the one of the largest polluters of clean water globally, right up there with agriculture.
+                                Cheap textiles also increase fast fashion’s impact. Polyester is one of the most popular fabrics. It is derived from fossil fuels, contributes to global warming, and can shed microfibres that add to the increasing levels of plastic in our oceans when washed or even worn. But even “natural” fabrics can be a problem at the scale fast fashion demands. Conventional cotton requires enormous quantities of water and pesticides in countries like India and China. This results in drought risks and creates extreme stress on water basins and competition for resources between companies and local communities.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script>
+        if(window.innerHeight > window.innerWidth)  window.location.href = "/unsupported"
+    </script>
+    <script type="module">
+        import "../js/fluid.js"
+    </script>
+</body>
+</html>
