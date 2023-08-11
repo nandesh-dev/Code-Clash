@@ -18,7 +18,7 @@ export function FAQ() {
 
 
     return <section className="h-full w-full flex justify-center px-2 overflow-y-scroll">
-        <section className="h-full w-full max-w-6xl">
+        <section className="h-full w-[60vw]">
             <section className="grid grid-cols-[1fr_auto] mt-10 sm:mt-24  bg-white-600 backdrop-blur-lg h-14 sm:h-20 w-full px-5 sm:px-8">
                 <input className="h-full w-full bg-transparent focus:outline-none sm:text-xl"
                     type="text"
@@ -30,6 +30,13 @@ export function FAQ() {
             </section>
             <section className="flex gap-4 flex-col mt-10 sm:mt-10">
                 {
+                    extraQuestions.map((q, index) => {
+                        return <div className="flex flex-col gap-2 sm:gap-4 bg-white-600 backdrop-blur-lg p-5 sm:p-8" id="ext-scroll" key={index}>
+                            <span className="font-medium text-lg sm:text-2xl">Q. {q}</span>
+                        </div>
+                    })
+                }
+                {
                     questionsAndAnswers.map(({ q, a }, index) => {
                         return <div className="flex flex-col gap-2 sm:gap-4 bg-white-600 backdrop-blur-lg p-5 sm:p-8" key={index}>
                             <span className="font-medium text-lg sm:text-2xl">Q. {q}</span>
@@ -38,17 +45,10 @@ export function FAQ() {
                         </div>
                     })
                 }
-                {
-                    extraQuestions.map((q, index) => {
-                        return <div className="flex flex-col gap-2 sm:gap-4 bg-white-600 backdrop-blur-lg p-5 sm:p-8" id="ext-scroll" key={index}>
-                            <span className="font-medium text-lg sm:text-2xl">Q. {q}</span>
-                        </div>
-                    })
-                }
             </section>
         </section>
         <div className="absolute self-end w-full">
-            <div className={`w-[calc(50vw-36rem-16px)] grid ${extraQuestionText ? "grid-rows-[auto_8rem]" : "grid-rows-[auto_4rem]"} items-start mx-2 bg-white-600 backdrop-blur-lg p-4 gap-3`}>
+            <div className={`w-[19vw] grid ${extraQuestionText ? "grid-rows-[auto_8rem]" : "grid-rows-[auto_4rem]"} items-start mx-2 bg-white-600 backdrop-blur-lg p-4 gap-3`}>
                 <p className="text-xl font-medium">Do you have a question? Just ask!</p>
                 <textarea 
                     type="text" 
