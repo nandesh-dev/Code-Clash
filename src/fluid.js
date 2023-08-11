@@ -2,8 +2,6 @@ export class Fluid {
     constructor(ref) {
         let stopped = false;
         const canvas = ref.current
-        console.log(canvas)
-        console.log("New class created!")
 
         resizeCanvas();
 
@@ -13,7 +11,7 @@ export class Fluid {
             CAPTURE_RESOLUTION: 512,
             DENSITY_DISSIPATION: 1,
             VELOCITY_DISSIPATION: 0.2,
-            PRESSURE: 0.4,
+            PRESSURE: 0.8,
             PRESSURE_ITERATIONS: 20,
             CURL: 30,
             SPLAT_RADIUS: 0.25,
@@ -22,7 +20,7 @@ export class Fluid {
             COLORFUL: true,
             COLOR_UPDATE_SPEED: 10,
             PAUSED: false,
-            BACK_COLOR: { r: 227, g: 228, b: 228 },
+            BACK_COLOR: { r: 230, g: 230, b: 230 },
             TRANSPARENT: false,
             BLOOM: true,
             BLOOM_ITERATIONS: 8,
@@ -30,7 +28,7 @@ export class Fluid {
             BLOOM_INTENSITY: 0.8,
             BLOOM_THRESHOLD: 0.6,
             BLOOM_SOFT_KNEE: 0.7,
-            SUNRAYS: false,
+            SUNRAYS: true,
             SUNRAYS_RESOLUTION: 196,
             SUNRAYS_WEIGHT: 1.0,
         }
@@ -985,7 +983,6 @@ export class Fluid {
 
         function stop (){
             stopped = true
-            console.log("Stopped Old Class")
         }
 
         function update() {
@@ -1287,8 +1284,8 @@ export class Fluid {
         window.addEventListener('mousemove', e => {
             let pointer = pointers[0];
             if (!pointer.down) return;
-            let posX = scaleByPixelRatio(e.screenX);
-            let posY = scaleByPixelRatio(e.screenY);
+            let posX = scaleByPixelRatio(e.clientX);
+            let posY = scaleByPixelRatio(e.clientY);
             updatePointerMoveData(pointer, posX, posY);
         });
 

@@ -1,3 +1,2 @@
-export * from "./Navbar"
-export * from "./Content"
-export * from "./Context"
+export * from "./Navbar/Navbar"
+export * from "./Canvas/Canvas"

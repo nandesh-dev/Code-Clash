@@ -16,6 +16,11 @@ code {
     monospace;
 }
 
+img {
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
 ::-webkit-scrollbar {
   width: 0.5rem;
   /* Adjust the width of the scrollbar */
